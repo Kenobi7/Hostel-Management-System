@@ -1,0 +1,38 @@
+</br></br>
+<nav class="navbar navbar-expand-md navbar-light bg-transparent rounded-1">
+  <div class="container">
+    <a class="navbar-brand" href="<%= root_path %>"><%= image_tag "logo.jpeg", height: "250" %></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbar-1" aria-controls="navbar-1" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-1">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a style="color:#00008B; font-size: 20px;"; class="nav-link" aria-current="page" href="<%= root_path %>">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="color:#00008B; font-size: 20px;"; class="nav-link dropdown-toggle" href="#" id="registerDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Register
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="registerDropdown">
+            <li><a class="dropdown-item" href="<%= student_register_path %>">Student</a></li>
+            <li><a class="dropdown-item" href="<%= warden_register_path %>">Warden</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="color:#00008B; font-size: 20px;"; class="nav-link dropdown-toggle" href="#" id="loginDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
+            <li><a class="dropdown-item" href="<%= student_login_path %>">Student</a></li>
+            <li><a class="dropdown-item" href="<%= warden_login_path %>">Warden</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

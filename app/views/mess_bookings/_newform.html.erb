@@ -1,0 +1,40 @@
+<%= form_with model: book do |form| %>
+    <div>
+      <%= form.label :rollno %><br>
+      <%= form.text_field :rollno %>
+      <% book.errors.full_messages_for(:rollno).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :mess_name %><br>
+      <%= form.text_field :mess_name %>
+      <% book.errors.full_messages_for(:hostel_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+
+    <div>
+      <%= form.label :start_date %><br>
+      <%= form.text_field :start_date %>
+      <% book.errors.full_messages_for(:start_date).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :end_date %><br>
+      <%= form.text_field :end_date %>
+      <% book.errors.full_messages_for(:end_date).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+   
+  </br>
+  <div class="d-flex justify-content-right">
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+</div>
+  <% end %>

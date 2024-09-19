@@ -1,0 +1,14 @@
+<h1>Requests</h1>
+</br>
+</br>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= link_to booking.rollno, booking %>
+      <h8>Status :</h8>
+    <%= booking.status %>
+    </li>
+  <% end %>
+</ul>
+
+  <%= link_to "Back to Dashboard", warden_dashboard_path, :class => 'btn btn-primary' %>

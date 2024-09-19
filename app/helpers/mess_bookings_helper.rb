@@ -1,0 +1,2 @@
+module MessBookingsHelper
+end

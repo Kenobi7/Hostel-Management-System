@@ -1,0 +1,16 @@
+<%= @booking.mess_name %>
+</br>
+<h8>start_date:</h8>
+<%= @booking.start_date %>
+</br>
+<h8>end_date:</h8>
+<%= @booking.end_date%>
+</br>
+</br>
+
+
+<ul>
+  <%= link_to "Update Status", edit_mess_booking_path(@booking) %>
+</ul>
+
+  <%= link_to "Back", mess_bookings_path, :class => 'btn btn-primary' %>

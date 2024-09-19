@@ -1,0 +1,60 @@
+</br></br>
+<h1>Welcome</h1>
+
+<div class="card">
+<div class="card-header d-flex justify-content-between">
+       <div class="header-title">
+          <h4 class="card-title">List of Hostels</h4>
+          </br>
+       </div>
+    </div>
+<ul>
+<% @hostel.each do |hostel| %>
+    <li>
+    <h5><%= hostel.name %></h5>
+    </li>
+    <h8>hostel id :</h8>
+    <%= hostel.hostel_id %>
+    </br>
+    <h8>mobile number :</h8>
+    <%= hostel.mobileno %>
+    </br>
+    <h8>Number of available_rooms :</h8>
+    <%= hostel.available_rooms %>
+    </br>
+    <h8>address :</h8>
+    <%= hostel.address %>
+    </br>
+    </br>
+    <% end %>
+</ul>
+
+<div class="card">
+<div class="card-header d-flex justify-content-between">
+       <div class="header-title">
+          <h4 class="card-title">List of Mess</h4>
+          </br>
+       </div>
+    </div>
+<ul>
+<% @mess.each do |mess| %>
+    <li>
+    <h5><%= mess.name %></h5>
+    </li>
+    <h8>mess id :</h8>
+    <%= mess.mess_id %>
+    </br>
+    <h8>mobile number :</h8>
+    <%= mess.mobileno %>
+    </br>
+    <h8>Available vacancy :</h8>
+    <%= mess.available %>
+    </br>
+    <h8>address :</h8>
+    <%= mess.address %>
+    </br>
+    </br>
+    <% end %>
+</ul> 
+
+

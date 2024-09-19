@@ -1,0 +1,55 @@
+<%= form_with model: booking do |form| %>
+    <div>
+      <%= form.label :rollno %><br>
+      <%= form.text_field :rollno %>
+      <% booking.errors.full_messages_for(:rollno).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :hostel_name %><br>
+      <%= form.text_field :hostel_name %>
+      <% booking.errors.full_messages_for(:hostel_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :room_no %><br>
+      <%= form.text_field :room_no %>
+      <% booking.errors.full_messages_for(:room_no).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :start_date %><br>
+      <%= form.text_field :start_date %>
+      <% booking.errors.full_messages_for(:start_date).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :end_date %><br>
+      <%= form.text_field :end_date %>
+      <% booking.errors.full_messages_for(:end_date).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :status %><br>
+      <%= form.select :status, ['Pending','Approved', 'Rejected']%>
+      <% booking.errors.full_messages_for(:status).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div> 
+
+  
+    </br>
+  <div class="d-flex justify-content-right">
+  <%= form.submit "update", class: "btn btn-primary" %>
+</div>
+  <% end %>

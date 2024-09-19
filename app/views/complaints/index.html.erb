@@ -1,0 +1,23 @@
+<div class="card">
+<div class="card-header d-flex justify-content-between">
+       <div class="header-title">
+          <h4 class="card-title">Complaints Raised </h4>
+          </br>
+       </div>
+    </div>
+<ul>
+<% @complaint.each do |complaint| %>
+    <h8>Roll_No:</h8>
+    <%= complaint.rollno %>
+    </br>
+    <h8>Description :</h8>
+    <%= complaint.description %>
+    </br>
+    </br>
+    <% end %>
+</ul>
+</br></br>
+<ul>
+  <%= link_to "Back to Dashboard", warden_dashboard_path, :class => 'btn btn-primary' %>
+</ul>
+

@@ -1,0 +1,20 @@
+<%= @booking.hostel_name %>
+</br>
+<h8>room_no:</h8>
+<%= @booking.room_no %>
+</br>
+<h8>start_date:</h8>
+<%= @booking.start_date %>
+</br>
+<h8>end_date:</h8>
+<%= @booking.end_date%>
+</br>
+</br>
+
+
+<ul>
+  <%= link_to "Update Status", edit_hostel_booking_path(@booking) %>
+</ul>
+
+</br>
+  <%= link_to "Back", hostel_bookings_path, :class => 'btn btn-primary' %>
